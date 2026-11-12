@@ -62,17 +62,13 @@ Step 1: Read and Display an Image
 ```
 import cv2
 import matplotlib.pyplot as plt
-
-# Read the image using OpenCV
-img = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg", cv2.IMREAD_COLOR)
-
-# Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
-img_rgb = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-
-# Display the image using Matplotlib
-plt.imshow(img_rgb, cmap='viridis')  # You can change 'viridis' to another cmap or use None for RGB images
-plt.title("Original Image")
-plt.axis('off')  # Removes axis ticks and labels
+image = cv2.imread('Qno. 1.jpg') 
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img_rgb.shape
+line_img = cv2.line(img_rgb, (0, 0), (768, 600), (255, 0, 0), 2) # cv2.line(image, start_point, end_point, color, thickness)
+plt.imshow(line_img, cmap='viridis')  
+plt.title("Image with Line")
+plt.axis('off')  
 plt.show()
 ```
 Step 2: Draw Shapes and Add Text

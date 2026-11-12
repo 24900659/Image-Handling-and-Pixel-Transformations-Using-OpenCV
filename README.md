@@ -1,81 +1,114 @@
-# Image-Handling-and-Pixel-Transformations-Using-OpenCV
-Name: MOHANA K.V.S.L
-Register Number: 212224240093
-AIM
+# Experiment 1: Image Handling and Pixel Transformations Using OpenCV
+
+## Name: SHAABIN R S 
+## Register Number: 212224230259
+
+
+---
+
+## AIM
 
 To perform image handling and pixel transformations using Python and OpenCV, including reading and displaying images, drawing shapes, adding text, color space conversion, pixel manipulation, image resizing, cropping, flipping, and saving the modified image.
 
-SOFTWARE REQUIRED
-```
-Python
-OpenCV
-Matplotlib
-Jupyter Notebook
-Anaconda (optional)
-```
-INSTALLATION
-```
+## SOFTWARE REQUIRED
+
+- Python
+- OpenCV
+- Matplotlib
+- Jupyter Notebook
+- Anaconda (optional)
+
+## INSTALLATION
+
 Install the required libraries using the following command:
 
+```bash
 pip install opencv-contrib-python-headless matplotlib
 ```
-ALGORITHM
-```
-Step 1: Read and Display an Image
-Import OpenCV and Matplotlib libraries.
-Read an image from the local directory using cv2.imread().
-Convert the image from BGR to RGB.
-Display the original image using Matplotlib.
-Step 2: Draw Shapes and Add Text
-Draw a line from the top-left to the bottom-right of the image.
-Draw a circle at the center of the image.
-Draw a rectangle around the image.
-Add the text "OpenCV Drawing" at the top-left corner.
-Step 3: Color Space Conversion
-Convert the RGB image to HSV and display it.
-Convert the RGB image to grayscale and display it.
-Convert the RGB image to YCrCb and display it.
-Convert the HSV image back to RGB and display it.
-Step 4: Pixel Manipulation
-Access and print the pixel value at coordinates (100, 100).
-Change the pixel at coordinates (200, 200) to white.
-Modify a 300 × 300 region of the image to white.
-Display the modified image.
-Step 5: Image Resizing
-Read the original image.
-Resize the image to half its original width and height.
-Display the resized image.
-Step 6: Image Cropping
-Read the original image.
-Extract a 300 × 300 region of interest starting at (50, 50).
-Display the cropped image.
-Step 7: Image Flipping
-Flip the original image horizontally.
-Flip the original image vertically.
-Display both flipped images.
-Step 8: Save the Final Modified Image
-Save the modified image in the local directory using cv2.imwrite().
-Verify that the image has been saved successfully.
-```
-PROGRAM
-Step 1: Read and Display an Image
-```
+
+## ALGORITHM
+
+### Step 1: Read and Display an Image
+
+1. Import OpenCV and Matplotlib libraries.
+2. Read an image from the local directory using `cv2.imread()`.
+3. Convert the image from BGR to RGB.
+4. Display the original image using Matplotlib.
+
+### Step 2: Draw Shapes and Add Text
+
+1. Draw a line from the top-left to the bottom-right of the image.
+2. Draw a circle at the center of the image.
+3. Draw a rectangle around the image.
+4. Add the text "OpenCV Drawing" at the top-left corner.
+
+### Step 3: Color Space Conversion
+
+1. Convert the RGB image to HSV and display it.
+2. Convert the RGB image to grayscale and display it.
+3. Convert the RGB image to YCrCb and display it.
+4. Convert the HSV image back to RGB and display it.
+
+### Step 4: Pixel Manipulation
+
+1. Access and print the pixel value at coordinates `(100, 100)`.
+2. Change the pixel at coordinates `(200, 200)` to white.
+3. Modify a 300 × 300 region of the image to white.
+4. Display the modified image.
+
+### Step 5: Image Resizing
+
+1. Read the original image.
+2. Resize the image to half its original width and height.
+3. Display the resized image.
+
+### Step 6: Image Cropping
+
+1. Read the original image.
+2. Extract a 300 × 300 region of interest starting at `(50, 50)`.
+3. Display the cropped image.
+
+### Step 7: Image Flipping
+
+1. Flip the original image horizontally.
+2. Flip the original image vertically.
+3. Display both flipped images.
+
+### Step 8: Save the Final Modified Image
+
+1. Save the modified image in the local directory using `cv2.imwrite()`.
+2. Verify that the image has been saved successfully.
+
+---
+
+## PROGRAM
+
+### Step 1: Read and Display an Image
+
+```python
 import cv2
 import matplotlib.pyplot as plt
-image = cv2.imread('Qno. 1.jpg') 
-img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-img_rgb.shape
-line_img = cv2.line(img_rgb, (0, 0), (768, 600), (255, 0, 0), 2) # cv2.line(image, start_point, end_point, color, thickness)
-plt.imshow(line_img, cmap='viridis')  
-plt.title("Image with Line")
-plt.axis('off')  
+
+# Read the image using OpenCV
+img = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg", cv2.IMREAD_COLOR)
+
+# Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
+img_rgb = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+
+# Display the image using Matplotlib
+plt.imshow(img_rgb, cmap='viridis')  # You can change 'viridis' to another cmap or use None for RGB images
+plt.title("Original Image")
+plt.axis('off')  # Removes axis ticks and labels
 plt.show()
 ```
-Step 2: Draw Shapes and Add Text
-```
-2.1 Draw a Line
+
+### Step 2: Draw Shapes and Add Text
+
+#### 2.1 Draw a Line
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 # Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -89,9 +122,13 @@ plt.imshow(line_img, cmap='viridis')
 plt.title("Image with Line")
 plt.axis('off')  
 plt.show()
-2.2 Draw a Circle
+```
+
+#### 2.2 Draw a Circle
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 # Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -105,9 +142,13 @@ plt.imshow(circle_img, cmap='viridis')
 plt.title("Image with Circle")
 plt.axis('off')  
 plt.show()
-2.3 Draw a Rectangle
+```
+
+#### 2.3 Draw a Rectangle
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 # Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -122,9 +163,13 @@ plt.imshow(rectangle_img, cmap='viridis')
 plt.title("Image with Rectangle")
 plt.axis('off')  
 plt.show()
-2.4 Add Text to the Image
+```
+
+#### 2.4 Add Text to the Image
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 # Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -139,10 +184,12 @@ plt.title("Image with Text")
 plt.axis('off')  
 plt.show()
 ```
-Step 3: Color Space Conversion
-```
+
+### Step 3: Color Space Conversion
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -182,8 +229,10 @@ plt.imshow(image_hsv_to_rgb)
 plt.title("HSV to RGB Image")
 plt.axis("off")
 ```
-Step 4: Pixel Manipulation
-```
+
+### Step 4: Pixel Manipulation
+
+```python
 # Modify a block of pixels (300x300) to white, starting from (200, 200)
 image[200:500, 200:500] = [255, 255, 255]  # Rows: 200-499, Columns: 200-499
 
@@ -196,9 +245,11 @@ plt.title("Image with 300x300 White Block")
 plt.axis("off")
 plt.show()
 ```
-Step 5: Image Resizing
-```
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+
+### Step 5: Image Resizing
+
+```python
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 image.shape
 
 # Resize the image to half its size
@@ -216,10 +267,11 @@ plt.axis("off")
 plt.show()
 ```
 
-Step 6: Image Cropping
-```
+### Step 6: Image Cropping
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 image.shape
 
@@ -235,10 +287,12 @@ plt.title("Cropped Region of Interest (ROI)")
 plt.axis("off")
 plt.show()
 ```
-Step 7: Image Flipping
-```
+
+### Step 7: Image Flipping
+
+```python
 # Load the image
-image = cv2.imread(r"C:\Users\admin\OneDrive\Desktop\ai assistant\WhatsApp Image 2026-10-30 at 8.45.52 AM.jpeg") 
+image = cv2.imread(r"C:\Users\admin\Downloads\Qno. 1.jpg.jpeg") 
 
 # Flip the image horizontally (left-right)
 flipped_horizontally = cv2.flip(image, 1)
@@ -262,83 +316,111 @@ plt.imshow(flipped_vertically_rgb)
 plt.title("Flipped Vertically")
 plt.axis("off")
 ```
-OUTPUT
+
+---
+
+## OUTPUT
+
 #The following outputs are obtained:
 
 #1. Original image displayed using OpenCV and Matplotlib.
 
-<img width="336" height="413" alt="image" src="https://github.com/user-attachments/assets/d085fa5c-6fcc-41ec-8cce-9781309bc999" />
+
+<img width="336" height="413" alt="Screenshot 2026-11-12 132123" src="https://github.com/user-attachments/assets/0badff04-5021-43a7-97f0-94da6cc1e45b" />
+
+
+
 
 #2. Image with a line drawn from the top-left to the bottom-right.
 
-<img width="314" height="409" alt="image" src="https://github.com/user-attachments/assets/ef584574-6f6a-44c4-a04f-e7fbd3352b06" />
+
+<img width="314" height="409" alt="Screenshot 2026-11-12 132204" src="https://github.com/user-attachments/assets/d1c76d47-f13d-4d34-8dff-87e2af8d4b0b" />
+
+
 
 
 #3. Image with a circle .
 
-<img width="339" height="414" alt="image" src="https://github.com/user-attachments/assets/6fd56bea-0fc2-47f5-a14f-6eca2bd4dd5e" />
+
+<img width="339" height="414" alt="Screenshot 2026-11-12 132221" src="https://github.com/user-attachments/assets/965f82fb-a6f7-4d62-aa6a-8c70ae1f49b3" />
+
 
 
 #4. Image with a rectangle around its boundary.
 
-<img width="319" height="427" alt="image" src="https://github.com/user-attachments/assets/72e7f162-ebfe-4935-b0bb-d601506ee127" />
+
+
 
 
 #5. Image with the text "OpenCV Drawing".
 
-<img width="312" height="427" alt="image" src="https://github.com/user-attachments/assets/5e28ab01-4a2a-4d5e-9f49-fa3956314efb" />
+
+<img width="415" height="532" alt="image" src="https://github.com/user-attachments/assets/41d7c731-bcfa-4ef3-95e7-dfe3339251d8" />
+
 
 
 #6. HSV, grayscale, and YCrCb color space conversions.
 
 #HSV conversion
 
-<img width="315" height="409" alt="image" src="https://github.com/user-attachments/assets/6ed25a02-ae2b-4092-8ccc-b44435832e9e" />
-
+<img width="415" height="521" alt="image" src="https://github.com/user-attachments/assets/1ecaa373-03b7-4639-a398-1105c6471491" />
 
 
 #grayscale conversion
 
-<img width="331" height="402" alt="image" src="https://github.com/user-attachments/assets/73af0719-94c7-4dcb-87dc-c38c6e766371" />
-
+<img width="395" height="530" alt="image" src="https://github.com/user-attachments/assets/3599d6d1-714b-43bb-a04e-cad8121936ad" />
 
 
 #YCrCb conversion
 
-<img width="315" height="404" alt="image" src="https://github.com/user-attachments/assets/e1ea8f4c-4186-4176-a957-60db90990918" />
+<img width="427" height="525" alt="image" src="https://github.com/user-attachments/assets/a3c3e619-7355-458b-b5b7-281ac29be602" />
+
 
 
 #7. Image converted from HSV back to RGB.
 
-<img width="335" height="413" alt="image" src="https://github.com/user-attachments/assets/f637b80f-7cbf-41b6-ba12-084c90be22e1" />
+
+<img width="400" height="512" alt="image" src="https://github.com/user-attachments/assets/745de947-4657-4dea-9709-650111d7ad25" />
+
 
 
 #8. Pixel value displayed and a white region added to the image.
 
-<img width="322" height="407" alt="image" src="https://github.com/user-attachments/assets/01f91c36-8974-49a5-b952-c6ddfc44d5f9" />
+
+<img width="417" height="510" alt="image" src="https://github.com/user-attachments/assets/a667cf37-0f07-47fd-aaba-7ccdf60d2b87" />
+
 
 
 #9. Image resized to half its original dimensions.
 
-<img width="528" height="415" alt="image" src="https://github.com/user-attachments/assets/1f344488-9cb9-43dc-acd8-e2283af416d7" />
+
+<img width="615" height="522" alt="image" src="https://github.com/user-attachments/assets/d4c8477d-19d3-46a7-993d-a6ef87cfc553" />
+
 
 
 #10. Cropped region of interest displayed.
 
-<img width="474" height="417" alt="image" src="https://github.com/user-attachments/assets/5d4d97d3-37ac-45ca-8917-e339a1e602b0" />
+
+<img width="522" height="527" alt="image" src="https://github.com/user-attachments/assets/1cd46e19-4a47-4f82-a6c8-66bf5fc55426" />
 
 
 #11. Horizontally flipped image displayed.
 
-<img width="329" height="413" alt="image" src="https://github.com/user-attachments/assets/ad537d08-7124-48f7-9b06-ad2b2ac5a69d" />
+
+<img width="432" height="522" alt="image" src="https://github.com/user-attachments/assets/66a89c31-0ab7-4fdc-b35a-a5e91c8c0cf3" />
+
 
 
 #12. Vertically flipped image displayed.
 
-<img width="325" height="406" alt="image" src="https://github.com/user-attachments/assets/ba838385-821b-4b6c-b6c3-c4e5b0dd035b" />
+
+<img width="392" height="525" alt="image" src="https://github.com/user-attachments/assets/56262b0b-d7f0-4341-821e-4b4fcabed90c" />
 
 
 
-RESULT
+
+## RESULT
+
 Thus, image handling and pixel transformations were performed using Python, OpenCV, and Matplotlib. The experiment demonstrated image reading, shape drawing, text insertion, color space conversion, pixel manipulation, image resizing, cropping, flipping, and saving.
 
+---

@@ -1,7 +1,7 @@
 # Experiment 1: Image Handling and Pixel Transformations Using OpenCV
 
-## Name: SHAABIN R S 
-## Register Number: 212224230259
+## Name: MOHANA K.V.S.L
+## Register Number: 212224240093
 
 
 ---
@@ -348,14 +348,15 @@ plt.axis("off")
 
 #4. Image with a rectangle around its boundary.
 
-
+<img width="292" height="415" alt="image" src="https://github.com/user-attachments/assets/0ce3ec44-1c8f-4ea2-8988-efcfcc9c943e" />
 
 
 
 #5. Image with the text "OpenCV Drawing".
 
 
-<img width="415" height="532" alt="image" src="https://github.com/user-attachments/assets/41d7c731-bcfa-4ef3-95e7-dfe3339251d8" />
+<img width="318" height="418" alt="image" src="https://github.com/user-attachments/assets/fd5ce341-6ef5-4e32-acc1-9b3f3408b839" />
+
 
 
 
@@ -363,58 +364,63 @@ plt.axis("off")
 
 #HSV conversion
 
-<img width="415" height="521" alt="image" src="https://github.com/user-attachments/assets/1ecaa373-03b7-4639-a398-1105c6471491" />
+<img width="292" height="440" alt="image" src="https://github.com/user-attachments/assets/9d68abb7-c96e-4bc0-99e7-28914182fe22" />
+
 
 
 #grayscale conversion
 
-<img width="395" height="530" alt="image" src="https://github.com/user-attachments/assets/3599d6d1-714b-43bb-a04e-cad8121936ad" />
+<img width="287" height="387" alt="image" src="https://github.com/user-attachments/assets/592836db-56a9-41a7-a077-e736e99453b3" />
+
 
 
 #YCrCb conversion
 
-<img width="427" height="525" alt="image" src="https://github.com/user-attachments/assets/a3c3e619-7355-458b-b5b7-281ac29be602" />
+<img width="291" height="399" alt="image" src="https://github.com/user-attachments/assets/af05843e-19cc-4068-b8a3-2c2201452f1d" />
+
 
 
 
 #7. Image converted from HSV back to RGB.
 
 
-<img width="400" height="512" alt="image" src="https://github.com/user-attachments/assets/745de947-4657-4dea-9709-650111d7ad25" />
+<img width="278" height="408" alt="image" src="https://github.com/user-attachments/assets/ad019a7d-7eea-43f6-a3c5-1be5971397ba" />
 
 
 
 #8. Pixel value displayed and a white region added to the image.
 
 
-<img width="417" height="510" alt="image" src="https://github.com/user-attachments/assets/a667cf37-0f07-47fd-aaba-7ccdf60d2b87" />
+<img width="296" height="404" alt="image" src="https://github.com/user-attachments/assets/0547fdea-ace2-4055-b2e3-cc59b90c788a" />
+
 
 
 
 #9. Image resized to half its original dimensions.
 
 
-<img width="615" height="522" alt="image" src="https://github.com/user-attachments/assets/d4c8477d-19d3-46a7-993d-a6ef87cfc553" />
+<img width="461" height="400" alt="image" src="https://github.com/user-attachments/assets/1ba2a6f2-b458-44c8-9259-804059d6193d" />
 
 
 
 #10. Cropped region of interest displayed.
 
 
-<img width="522" height="527" alt="image" src="https://github.com/user-attachments/assets/1cd46e19-4a47-4f82-a6c8-66bf5fc55426" />
+<img width="384" height="417" alt="image" src="https://github.com/user-attachments/assets/e2424b2c-0e4a-4e4e-a611-afdca6740e9e" />
+
 
 
 #11. Horizontally flipped image displayed.
 
 
-<img width="432" height="522" alt="image" src="https://github.com/user-attachments/assets/66a89c31-0ab7-4fdc-b35a-a5e91c8c0cf3" />
+<img width="295" height="393" alt="image" src="https://github.com/user-attachments/assets/298e6c94-536e-49b4-82c9-1a6772207807" />
 
 
 
 #12. Vertically flipped image displayed.
 
 
-<img width="392" height="525" alt="image" src="https://github.com/user-attachments/assets/56262b0b-d7f0-4341-821e-4b4fcabed90c" />
+<img width="298" height="403" alt="image" src="https://github.com/user-attachments/assets/538d5827-2eb9-4621-91d0-426c5e5bd332" />
 
 
 

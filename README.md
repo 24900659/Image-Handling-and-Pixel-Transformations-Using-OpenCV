@@ -2,19 +2,25 @@
 Name: MOHANA K.V.S.L
 Register Number: 212224240093
 AIM
+
 To perform image handling and pixel transformations using Python and OpenCV, including reading and displaying images, drawing shapes, adding text, color space conversion, pixel manipulation, image resizing, cropping, flipping, and saving the modified image.
 
 SOFTWARE REQUIRED
+```
 Python
 OpenCV
 Matplotlib
 Jupyter Notebook
 Anaconda (optional)
+```
 INSTALLATION
+```
 Install the required libraries using the following command:
 
 pip install opencv-contrib-python-headless matplotlib
+```
 ALGORITHM
+```
 Step 1: Read and Display an Image
 Import OpenCV and Matplotlib libraries.
 Read an image from the local directory using cv2.imread().
@@ -50,6 +56,7 @@ Display both flipped images.
 Step 8: Save the Final Modified Image
 Save the modified image in the local directory using cv2.imwrite().
 Verify that the image has been saved successfully.
+```
 PROGRAM
 Step 1: Read and Display an Image
 ```
